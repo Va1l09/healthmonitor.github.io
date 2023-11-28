@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Monitor</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <h1>Health Monitor</h1>
+  
+    <form id="healthForm">
+      <label for="type">Tipo de Medición:</label>
+      <input type="text" id="type" required>
+  
+      <label for="value">Valor:</label>
+      <input type="text" id="value" required>
+  
+      <label for="date">Fecha y Hora:</label>
+      <input type="datetime-local" id="date" required>
+  
+      <label for="comments">Comentarios:</label>
+      <textarea id="comments" rows="4"></textarea>
+  
+      <button type="button" onclick="agregarMedicion()">Agregar Medición</button>
+      <button type="button" onclick="consultarMediciones()">Consultar Mediciones</button>
+    </form>
+  
+    <div id="resultado"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
