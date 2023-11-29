@@ -1,5 +1,5 @@
 class Medicion {
-  constructor(type, value, date, comments) {
+  constructor(nombre, type, value, date, comments) {
     this.type = type;
     this.value = value;
     this.date = date;
@@ -25,6 +25,19 @@ function consultarMediciones() {
   mediciones.forEach(medicion => {
     mostrarResultado(`Tipo: ${medicion.type}, Valor: ${medicion.value}, Fecha: ${medicion.date}, Comentarios: ${medicion.comments}`);
   });
+}
+
+function borrarMedicion(indice) {
+  if (mediciones.length === 0) {
+    mostrarResultado('No hay mediciones para borrar.');
+    return;
+  }
+  if (indice < 0 || indice >= mediciones.length) {
+    mostrarResultado('Índice de medición no válido.');
+    return;
+  }
+  const medicionBorrada = mediciones.splice(indice, 1)[0];
+  mostrarResultado(`Medición de ${medicionBorrada.type} en el índice ${indice} borrada.`);
 }
 
 function mostrarResultado(mensaje) {
