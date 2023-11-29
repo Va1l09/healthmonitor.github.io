@@ -13,7 +13,14 @@
   
     <form id="healthForm">
       <label for="type">Tipo de Medición:</label>
-      <input type="text" id="type" required>
+      <select id="type" required>
+        <option value="frecuencia-cardiaca">Frecuencia Cardíaca</option>
+        <option value="glucosa">Nivel de Glucosa en Sangre</option>
+        <option value="peso">Peso Corporal</option>
+        <option value="altura">Altura</option>
+        <option value="imc">Índice de Masa Corporal (IMC)</option>
+        <option value="temperatura">Temperatura Corporal</option>
+      </select>
   
       <label for="value">Valor:</label>
       <input type="text" id="value" required>
@@ -26,6 +33,8 @@
   
       <button type="button" onclick="agregarMedicion()">Agregar Medición</button>
       <button type="button" onclick="consultarMediciones()">Consultar Mediciones</button>
+      <button type="button" onclick="autenticarGoogle()">Iniciar sesión con Google</button>
+      <button type="button" onclick="autenticarTwitter()">Iniciar sesión con Twitter</button>
     </form>
   
     <div id="resultado"></div>
