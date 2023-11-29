@@ -12,6 +12,9 @@
     <h1>Health Monitor</h1>
   
     <form id="healthForm">
+      <label for="value">Nombre:</label>
+      <input type="text" id="nombre" required>
+
       <label for="type">Tipo de Medición:</label>
       <select id="type" required>
         <option value="frecuencia-cardiaca">Frecuencia Cardíaca</option>
@@ -32,11 +35,14 @@
       <textarea id="comments" rows="4"></textarea>
       
       <div class="buttons-container">
-      <button type="button" onclick="agregarMedicion()">Agregar Medición</button>
-      <button type="button" onclick="consultarMediciones()">Consultar Mediciones</button>
-      <button type="button" onclick="borrarMedicion()">Borrar Medición</button>
-      <button type="button" onclick="autenticarGoogle()">Iniciar sesión con Google</button>
-      <button type="button" onclick="autenticarTwitter()">Iniciar sesión con Twitter</button>
+        <button type="button" onclick="agregarMedicion()">Agregar Medición</button>
+        <button type="button" onclick="consultarMediciones()">Consultar Mediciones</button>
+        <button type="button" onclick="borrarMedicion()">Borrar Medición</button>
+      </div>
+      
+        <div class="buttons-container">
+        <button type="button" onclick="autenticarGoogle()">Iniciar sesión con Google</button>
+        <button type="button" onclick="autenticarTwitter()">Iniciar sesión con Twitter</button>
       </div>
     </form>
   
