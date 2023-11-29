@@ -1,5 +1,6 @@
 class Medicion {
   constructor(nombre, type, value, date, comments) {
+    this.nombre = nombre;
     this.type = type;
     this.value = value;
     this.date = date;
@@ -10,12 +11,13 @@ class Medicion {
 const mediciones = [];
 
 function agregarMedicion() {
+  const nombre = document.getElementById('nombre').value;
   const type = document.getElementById('type').value;
   const value = document.getElementById('value').value;
   const date = document.getElementById('date').value;
   const comments = document.getElementById('comments').value;
 
-  const nuevaMedicion = new Medicion(type, value, date, comments);
+  const nuevaMedicion = new Medicion(nombre, type, value, date, comments);
   mediciones.push(nuevaMedicion);
   mostrarResultado(`Medición de ${type} agregada correctamente.`);
 }
@@ -23,7 +25,7 @@ function agregarMedicion() {
 function consultarMediciones() {
   mostrarResultado('Mediciones registradas:');
   mediciones.forEach(medicion => {
-    mostrarResultado(`Tipo: ${medicion.type}, Valor: ${medicion.value}, Fecha: ${medicion.date}, Comentarios: ${medicion.comments}`);
+    mostrarResultado(`Nombre: ${medicion.nombre}, Tipo: ${medicion.type}, Valor: ${medicion.value}, Fecha: ${medicion.date}, Comentarios: ${medicion.comments}`);
   });
 }
 
